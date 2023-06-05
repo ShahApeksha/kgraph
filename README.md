@@ -62,9 +62,49 @@ In LPG-style databases the graph is comprised of nodes and relationships. Each n
 
 ![image](https://github.com/Jeri-jose/kgraph/assets/72429659/91792f73-0ba4-487a-8b55-c0fe19c96b4b)
 
+### Stratergy
+so as of now we decided to split the group into 2  for understanding the rdf and lpg.
+the rdf team used the terminusDB and Protege and the LPG  used the neo4j
+
+the infernce that we were able to come after looking into these 2 property were that
+---> RDFs uses URI as their identifiers , while LPG uses simple strings
+---> RDF uses triples as atom  of data, lpg are simply collection of arbritary data
 
 
+In our view, the matter of preferences between the properties databases like Neo4j or RDF triple stores comes down to whether a particular application case can actually 
+benefit from the extra features available via Semantic Web technologies
 
+Neo4j database belongs to the family of “Property graph” databases, which in contrast
+to RDF have conceptually distinct property elements that can be attached to both
+nodes and edges. In some respects, this syntax may be more familiar to users of object-
+oriented languages, as in contrast to RDF, there is neither a global uniqueness con-
+straint nor specifically required format for node identifiers. In combination, these fea-
+tures make graph query syntax more compact and easier to read. Given that the Neo4j
+database is inherently a “closed world” solution, it is possible to collect the entirety of
+meta-data about the types and number of different entities and relationships between
+them, which can then inform further exploration. As SPARQL and RDF are primarily
+designed to operate in an “open world” setting of the Semantic Web, creating such
+summaries may not always be possible or can be very computationally intensive.
+ In our view, the matter of preferences
+between the properties databases like Neo4j or RDF triple stores comes down to
+whether a particular application case can actually benefit from the extra features
+available via Semantic Web technologies
+The lack of schema in Neo4j may also be somewhat of a double-edge sword: although
+it does offer much flexibility, it also removes the interoperability standard from the
+data, which may make sharing and management of large distributed projects datasets
+Lysenko et al. BioData Mining (2016) 9:23 Page 16 of 19
+more challenging. One possible solution to this would be to re-introduce some consist-
+ent semantics by binding critical attribute names and/or values of nodes and edges to a
+consensus controlled vocabulary. In a biomedical domain, this controlled vocabulary
+will likely come in the form of a suitable ontology. The ontologies could then provide a
+de-facto data modelling standard and many key concepts in the biomedical domain
+have already been modelled by projects like SNOMED [31], MeSH [32], GO [33] and
+OBI [34], with several hundred of other more specialized ontologies available from the
+OBO foundry [35] and NCBO Bioportal [36] repositories. Although at present the
+availability of advanced ontology-based features, like reasoning and data validation, var-
+ies in different graph databases, some notable solutions do offer examples of very close
+integration - e.g. the already-mentioned graph databases based on the resource descrip-
+tion framework (RDF)
 
 
 
