@@ -106,9 +106,7 @@ ies in different graph databases, some notable solutions do offer examples of ve
 integration - e.g. the already-mentioned graph databases based on the resource descrip-
 tion framework (RDF)
 
-
-
-
+### Building Beyond with LPG
 
 
 
