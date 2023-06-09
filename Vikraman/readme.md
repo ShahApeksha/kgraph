@@ -11,6 +11,14 @@ We first wanted to build a KG for one disease and see how it goes. We chose, Sic
 
 I was searching for ways to extract all details about sickle cell anaemia in the same format the csv file was in. I came across this application called [https://www.gigasheet.com/]. It helped me to filter all the rows by the relation name. After doing that I grouped the filtered table based on sickle cell anaemia. Prem helped me in copying the data in their and putting it in excel sheet and converting it into a csv file. I uploaded it in neo4j, jeri helped me with some minor issues I faced. That was it. We got a knowledge graph with 86 nodes and 85 relationships for sickle cell anaemia.
 
+
+```
+LOAD CSV WITH HEADERS FROM 'file:///sickle_cell_anaemia.csv' AS row
+MERGE (x:Node {name: row.x_name, type: row.x_type, id: row.x_id,source:row.x_source})
+MERGE (y:Node {name: row.y_name, type: row.y_type, id: row.y_id,source:row.y_source})
+MERGE (x)-[:RELATION {type: row.display_relation}]->(y)
+```
+
 # note: the summary of PRIME KG's NATURE paper 
 
 A resource that comprehensively describes the relationships of diseases to biomedical entities would enable systematic study of human disease. Understanding the connections between diseases, drugs, phenotypes, and other entities could open the doors for many types of research, Knowledge graphs developed for individual diseases have yielded results and insights to diseases but the costs and extended timelines of these individual efforts has created a need to create an umbrella for all this biomedical knowledge.
