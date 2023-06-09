@@ -1,1 +1,3 @@
-
+'OfficeOntology.owl' is an example ontology created to get familiar with the platform Neo4j.
+'officeCYPHER' contains cypher queries to generate the knowledge graph in neo4j using the office ontology.
+'graphWithoutOntology' contains the code where we generated a knowledge graph in Neo4j without using an ontology. The graph makes little to no sense as it allows same kind of relationships to exit with different names between different nodes at the same time. It also allows multiple relationships that are actually the same to exist between two nodes. That is why, creating and using an ontology is very necessary!!
