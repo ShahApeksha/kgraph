@@ -1,9 +1,9 @@
-'''
+' ' ' 
 LOAD CSV WITH HEADERS FROM 'file:///sickle_cell_anaemia.csv' AS row
 MERGE (x:Node {name: row.x_name, type: row.x_type, id: row.x_id,source:row.x_source})
 MERGE (y:Node {name: row.y_name, type: row.y_type, id: row.y_id,source:row.y_source})
 MERGE (x)-[:RELATION {type: row.display_relation}]->(y)
-'''
+' ' '
 
 #Precision Medicine Oriented Knowledge Graph
 
