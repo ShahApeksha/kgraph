@@ -1,0 +1,79 @@
+CREATE (n:Office {name:'Office'})
+
+CREATE (n:Employees {name:'Employees'})
+
+CREATE (n:Departments {name:'Departments'})
+
+CREATE (n:Marketing {name:"Marketing"})
+
+CREATE (n:International {name:'france_branch',depID:"D-002-1",createdON:"10-10-2010"})
+
+CREATE (n:Local {name:'delhi_branch',depID:"D-002-2",createdON:"18-05-2008"})
+
+CREATE (n:Human_Resource {name:'mumbai_branch',depID:"D001-1",createdON:"09-09-2009"})
+
+CREATE (n:Operations {name:'opcore',depID:"D-003",createdON:"28-08-2007"})
+
+CREATE (n:External {name:'External'})
+
+CREATE (n:Internal {name:'Internal'})
+
+CREATE (n:Manager {empName:'Sina Deinert',depID:'E-009',joinedON:'25-02-2015',empContact:"237973101"})
+
+CREATE (n:Senior {empName:'Harry Riordan',depID:'E-001',joinedON:'08-01-2018',empContact:"1838011001"})
+
+CREATE (n:Intern {empName:'Tara Gray',depID:'E-019',joinedON:'09-20-2022',empContact:"9217091001"})
+
+CREATE (n:Junior {empName:'Hina Yoshihara',depID:'E-013',joinedON:'09-01-2020',empContact:"19011700132"})
+
+MATCH (O:Office),(E:Employees)
+WHERE O.name='Office' AND E.name ='Employees'
+CREATE (O)-[has:HAS]->(E)
+
+MATCH (O:Office),(D:Departments)
+WHERE O.name='Office' AND D.name ='Departments'
+CREATE (O)-[has:HAS]->(D)
+
+MATCH (D:Departments),(MRKT:Marketing)
+WHERE D.name ='Departments' AND MRKT.name ='Marketing'
+CREATE (D)-[is_a_kind_of:IS_A_KIND_OF]->(MRKT)
+
+MATCH (MRKT:Marketing),(L:Local)
+WHERE MRKT.name ='Marketing' AND L.name ='delhi_branch'
+CREATE (MRKT)-[sub_department:SUB_DEPARTMENT]->(L)
+
+MATCH (MRKT:Marketing),(I:International)
+WHERE MRKT.name ='Marketing' AND I.name ='france_branch'
+CREATE (MRKT)-[sub_department:SUB_DEPARTMENT]->(I)
+
+MATCH (D:Departments),(HR:Human_Resource)
+WHERE D.name ='Departments' AND HR.name ='mumbai_branch'
+CREATE (D)-[is_a_kind_of:IS_A_KIND_OF]->(HR)
+
+MATCH (D:Departments),(O:Operations)
+WHERE D.name ='Departments' AND O.name = 'opcore'
+CREATE (D)-[is_a_kind_of:IS_A_KIND_OF]->(O)
+
+MATCH (O:Operations),(IN:Internal)
+WHERE O.name = 'opcore' AND IN.name = 'Internal'
+CREATE (O)-[is_a_part_of:IS_A_PART_OF]->(IN)
+
+MATCH (O:Operations),(EX:External)
+WHERE O.name = 'opcore' AND EX.name = 'External'
+CREATE (O)-[is_a_part_of:IS_A_PART_OF]->(EX)
+
+MATCH (E:Employees),(MR:Manager)
+WHERE E.name = 'Employees' AND MR.empName = 'Sina Deinert'
+CREATE (E)-[type:TYPES]->(MR)
+
+MATCH (E:Employees),(SR:Senior)
+WHERE E.name = 'Employees' AND SR.empName='Harry Riordan'
+CREATE (E)-[type:TYPES]->(SR)
+
+MATCH (E:Employees),(IR:Intern)
+WHERE E.name = 'Employees' AND IR.empName = 'Tara Gray'
+CREATE (E)-[type:TYPES]->(IR)
+
+MATCH (E:Employees),(JR:Junior)
+WHERE E.name = 'Employees' AND JR.empName = 'Hina Yoshihara'
+CREATE (E)-[type:TYPES]->(JR)
