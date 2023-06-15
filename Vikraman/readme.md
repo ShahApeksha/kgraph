@@ -19,6 +19,15 @@ MERGE (y:Node {name: row.y_name, type: row.y_type, id: row.y_id,source:row.y_sou
 MERGE (x)-[:RELATION {type: row.display_relation}]->(y)
 ```
 
+to colour based on labels
+
+```
+MATCH (n:Node)
+WITH DISTINCT n.source AS source, collect(DISTINCT n) AS class
+CALL apoc.create.addLabels(class, [apoc.text.upperCamelCase(source)]) YIELD node
+RETURN *
+```
+
 # note: the summary of PRIME KG's NATURE paper 
 
 A resource that comprehensively describes the relationships of diseases to biomedical entities would enable systematic study of human disease. Understanding the connections between diseases, drugs, phenotypes, and other entities could open the doors for many types of research, Knowledge graphs developed for individual diseases have yielded results and insights to diseases but the costs and extended timelines of these individual efforts has created a need to create an umbrella for all this biomedical knowledge.
