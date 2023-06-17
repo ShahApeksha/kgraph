@@ -35,11 +35,6 @@ Key Points:
 the open source, it's called Hetionet. It was released in 2017
 and it is way ahead of their time. So they released a knowledge graph
 
-
-Conclusion:
-- Knowledge graphs offer a promising approach to address the challenges faced in drug discovery.
-- By integrating diverse datasets and revealing hidden connections, knowledge graphs can support researchers in making informed decisions, improving the efficiency of drug development, and ultimately benefiting patient care.
-
 The Crossr demo continued with the exploration of a network of differentially expressed genes in the context of epilepsy. Differentially expressed genes are of interest because they could potentially be reversed to normal levels, thereby reversing the disease state. The focus was on identifying small clusters within this gene set that have been differentially expressed in epilepsy to potentially identify a target.
 
 The Neo4j graph data science library was used, which provides analytical features such as Louvain clustering with community detection. By running clustering using the Crossr platform and Neo4j's GDS library, five clusters of genes, representing functional modules, were identified in the network. These modules consisted of genes that interacted with each other and were functionally related.
