@@ -1,4 +1,4 @@
-#Title: Neo4j Live: Crossr - Knowledge Graph based Drug Discovery
+# Title: Neo4j Live: Crossr - Knowledge Graph based Drug Discovery
 
 Introduction:
 - The video explores the relationship between drug discovery and knowledge graphs, highlighting their importance in advancing pharmaceutical research.
@@ -35,19 +35,20 @@ Key Points:
 the open source, it's called Hetionet. It was released in 2017
 and it is way ahead of their time. So they released a knowledge graph
 
-The Crossr demo continued with the exploration of a network of differentially expressed genes in the context of epilepsy. Differentially expressed genes are of interest because they could potentially be reversed to normal levels, thereby reversing the disease state. The focus was on identifying small clusters within this gene set that have been differentially expressed in epilepsy to potentially identify a target.
+# CROSSR
+-The Crossr demo continued with the exploration of a network of differentially expressed genes in the context of epilepsy. Differentially expressed genes are of interest because they could potentially be reversed to normal levels, thereby reversing the disease state. The focus was on identifying small clusters within this gene set that have been differentially expressed in epilepsy to potentially identify a target.
 
-The Neo4j graph data science library was used, which provides analytical features such as Louvain clustering with community detection. By running clustering using the Crossr platform and Neo4j's GDS library, five clusters of genes, representing functional modules, were identified in the network. These modules consisted of genes that interacted with each other and were functionally related.
+-The Neo4j graph data science library was used, which provides analytical features such as Louvain clustering with community detection. By running clustering using the Crossr platform and Neo4j's GDS library, five clusters of genes, representing functional modules, were identified in the network. These modules consisted of genes that interacted with each other and were functionally related.
 
-To determine which module to investigate further, enrichment analysis was performed to identify prevalent biological processes and pathways within the modules. The paper being followed, Craft, emphasized the importance of immune response processes in identifying relevant modules. By analyzing the enrichment results, the pink cluster (cluster two) was identified as being associated with immune response processes, particularly inflammatory response and regulation of immune response.
+-To determine which module to investigate further, enrichment analysis was performed to identify prevalent biological processes and pathways within the modules. The paper being followed, Craft, emphasized the importance of immune response processes in identifying relevant modules. By analyzing the enrichment results, the pink cluster (cluster two) was identified as being associated with immune response processes, particularly inflammatory response and regulation of immune response.
 
-The module in cluster two was then selected for further investigation. It was found that some genes in this module were already known to be linked to epilepsy and seizures. The module was also found to be enriched for microglia, a cell type associated with inflammation. This module of genes became the focus of the analysis.
+-The module in cluster two was then selected for further investigation. It was found that some genes in this module were already known to be linked to epilepsy and seizures. The module was also found to be enriched for microglia, a cell type associated with inflammation. This module of genes became the focus of the analysis.
 
-Using the Crossr platform, potential drug targets for epilepsy were identified by looking for upstream regulators that had an impact on the module as a whole. Master regulator analysis, a type of analysis offered by Crossr, was performed to identify genes upstream of the genes in the module. CSF1R, a gene that regulates multiple targets in the module, was identified as a potential therapeutic target. CSF1R was highlighted in the original paper as an interesting target for antiepileptic drug intervention because of its regulatory role and its status as a receptor, making it an accessible drug target.
+-Using the Crossr platform, potential drug targets for epilepsy were identified by looking for upstream regulators that had an impact on the module as a whole. Master regulator analysis, a type of analysis offered by Crossr, was performed to identify genes upstream of the genes in the module. CSF1R, a gene that regulates multiple targets in the module, was identified as a potential therapeutic target. CSF1R was highlighted in the original paper as an interesting target for antiepileptic drug intervention because of its regulatory role and its status as a receptor, making it an accessible drug target.
 
-The use of a knowledge graph, specifically Neo4j, proved beneficial in exploring the functional orientation of CSF1R and its connections. Pathways associated with CSF1R were examined, as well as drugs known to impact this gene. The paper utilized PLX3397 as a compound to inhibit CSF1R in a preclinical model of epilepsy.
+-The use of a knowledge graph, specifically Neo4j, proved beneficial in exploring the functional orientation of CSF1R and its connections. Pathways associated with CSF1R were examined, as well as drugs known to impact this gene. The paper utilized PLX3397 as a compound to inhibit CSF1R in a preclinical model of epilepsy.
 
-It is important to note that further validation through human trials would be necessary before CSF1R can be considered a definitive target of interest for epilepsy treatment.
+-It is important to note that further validation through human trials would be necessary before CSF1R can be considered a definitive target of interest for epilepsy treatment.
 
 Overall, the demo showcased how the Crossr platform, combined with the Neo4j graph data science library, can facilitate the identification of potential therapeutic targets for complex diseases like epilepsy. The platform allows for the exploration of gene networks, clustering of differentially expressed genes, enrichment analysis of biological processes, and identification of upstream regulators for targeted intervention.
 
