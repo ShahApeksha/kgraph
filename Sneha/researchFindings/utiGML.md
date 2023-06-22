@@ -20,10 +20,10 @@ label critical missing data points and reduce model uncertainty.
 - The document describes several graph algorithm strategies, including traditional approaches such as centrality measures and clustering:
     - Centrality measures like closeness centrality quantify how closely a node isconnected to all other nodes
     - While clustering can be used to derive topological descriptors of the wiring patterns around each node in a graph.
-    - as well as more recent approaches such as random-walk based methods and graph neural networks.
+- as well as more recent approaches such as random-walk based methods and graph neural networks.
     - Random-walk based methods and graph neural networks are both approaches used in graph analysis and machine        learning. Random-walk based methods, such as Deepwalk and node2vec, aim to embed a graph's nodes in a low-dimensional space while preserving node proximities.
     - On the other hand, graph neural networks use neural networks to learn representations of nodes and edges in a graph, allowing for tasks such as node classification and link prediction. Both approaches have been successful in various applications and have their own strengths and weaknesses.
-    - Additionally, the document discusses graph diffusion and graph isomorphism as related notions in graph analysis.
+- Additionally, the document discusses graph diffusion and graph isomorphism as related notions in graph analysis.
     - Graph diffusion is a notion that models the propagation of a signal on a graph,
     - while graph isomorphism is the problem of determining whether two graphs are structurally identical. The Weisfeiler-Lehman (WL) graph isomorphism test is a classical polynomial-time algorithm in graph theory that is based on iterative graph recoloring.
 Overall, the document covers a range of graph algorithm strategies and their applications in machine learning and drug discovery.
