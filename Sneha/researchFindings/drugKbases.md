@@ -24,4 +24,4 @@ their relations.
 - While these integrations were performed at a limited scale, there are a few challenges when performing integration at a larger scale.
 - The first challenge is entity matching (or mapping) between two or more knowledge bases.
 - Another challenge is integrating relations of entities. It is not a problem if there is only one type of relation between two entities.
-- However, if more than one types of relation exist between two entities, we first need to identify all possible relations between the two entities and review how these relations are represented in different drug knowledge bases .
+- However, if more than one types of relation exist between two entities, we first need to identify all possible relations between the two entities and review how these relations are represented in different drug knowledge bases.
