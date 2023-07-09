@@ -1,5 +1,5 @@
 
-# Characteristics of Artificial Intelligence Clinical Trials in the Field of Healthcare: A Cross-Sectional Study on ClinicalTrials.gov
+ # Characteristics of Artificial Intelligence Clinical Trials in the Field of Healthcare: A Cross-Sectional Study on ClinicalTrials.gov
  
 DOI: 10.3390/ijerph192013691
 1. Introduction:
