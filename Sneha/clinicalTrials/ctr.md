@@ -1,23 +1,23 @@
 # Using Semantic Web technologies for Clinical Trial Recruitment
 
 1.	Introduction:
-•	Clinical trials are important for evaluating new treatments and diagnostic approaches.
-•	Recruitment of patients for clinical trials is challenging and often results in a lack of participants.
-•	This paper proposes a method using semantic web technologies to automate patient recruitment for clinical trials.
+- •	Clinical trials are important for evaluating new treatments and diagnostic approaches.
+- •	Recruitment of patients for clinical trials is challenging and often results in a lack of participants.
+- •	This paper proposes a method using semantic web technologies to automate patient recruitment for clinical trials.
 2.	Clinical Trials:
-•	Clinical trials are research studies that test the safety and effectiveness of interventions.
-•	They address various medical issues and require adequate sample sizes for reliable results.
-•	Meeting recruitment targets in a timely and cost-effective manner is a common challenge.
+- •	Clinical trials are research studies that test the safety and effectiveness of interventions.
+- •	They address various medical issues and require adequate sample sizes for reliable results.
+- •	Meeting recruitment targets in a timely and cost-effective manner is a common challenge.
 3.	Problem Description: 
-3.1 Patient Data:
-•	Patient data, including medical history and current health status, can be stored in Electronic Health Records (EHR).
-•	Formal representation of patient data is essential for querying and interoperability.
-•	An example of patient record is provided.
-Figure 1: Example of a patient record available at a multidisciplinary meeting.
-3.2 Eligibility Criteria:
-•	Eligibility criteria define the characteristics required for patients to participate in a clinical trial.
-•	Criteria can include medical parameters, personal attributes, disease staging, and time constraints.
-•	An example of eligibility criteria for a prostate cancer trial is given.
+ - 3.1 Patient Data:
+    - •	Patient data, including medical history and current health status, can be stored in Electronic Health Records (EHR).
+    - •	Formal representation of patient data is essential for querying and interoperability.
+    - •	An example of patient record is provided.
+- Figure 1: Example of a patient record available at a multidisciplinary meeting.
+ - 3.2 Eligibility Criteria:
+    - •	Eligibility criteria define the characteristics required for patients to participate in a clinical trial.
+    - •	Criteria can include medical parameters, personal attributes, disease staging, and time constraints.
+    - •	An example of eligibility criteria for a prostate cancer trial is given.
 4.	State of the Art:
 •	Different formalisms have been used to represent eligibility criteria.
 •	Ad hoc languages, such as HL7 RIM, provide basic comparison and logical operators.
