@@ -1,13 +1,13 @@
 # Using Semantic Web technologies for Clinical Trial Recruitment
 
 1.	Introduction:
-- •	Clinical trials are important for evaluating new treatments and diagnostic approaches.
-- •	Recruitment of patients for clinical trials is challenging and often results in a lack of participants.
-- •	This paper proposes a method using semantic web technologies to automate patient recruitment for clinical trials.
+-Clinical trials are important for evaluating new treatments and diagnostic approaches.
+-Recruitment of patients for clinical trials is challenging and often results in a lack of participants.
+-This paper proposes a method using semantic web technologies to automate patient recruitment for clinical trials.
 2.	Clinical Trials:
-- •	Clinical trials are research studies that test the safety and effectiveness of interventions.
-- •	They address various medical issues and require adequate sample sizes for reliable results.
-- •	Meeting recruitment targets in a timely and cost-effective manner is a common challenge.
+-Clinical trials are research studies that test the safety and effectiveness of interventions.
+-They address various medical issues and require adequate sample sizes for reliable results.
+-Meeting recruitment targets in a timely and cost-effective manner is a common challenge.
 3.	Problem Description: 
  - 3.1 Patient Data:
     - •	Patient data, including medical history and current health status, can be stored in Electronic Health Records (EHR).
