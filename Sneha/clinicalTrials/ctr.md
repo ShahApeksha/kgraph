@@ -13,18 +13,18 @@
     - •	Patient data, including medical history and current health status, can be stored in Electronic Health Records (EHR).
     - •	Formal representation of patient data is essential for querying and interoperability.
     - •	An example of patient record is provided.
-- Figure 1: Example of a patient record available at a multidisciplinary meeting.
+Figure 1: Example of a patient record available at a multidisciplinary meeting.
  - 3.2 Eligibility Criteria:
     - •	Eligibility criteria define the characteristics required for patients to participate in a clinical trial.
     - •	Criteria can include medical parameters, personal attributes, disease staging, and time constraints.
     - •	An example of eligibility criteria for a prostate cancer trial is given.
 4.	State of the Art:
-•	Different formalisms have been used to represent eligibility criteria.
-•	Ad hoc languages, such as HL7 RIM, provide basic comparison and logical operators.
-•	Arden Syntax offers a hybrid approach with rich time functions and explicit links to clinical data.
-•	Logic-based languages, including SQL and Description Logic, vary in expressivity.
-•	The paper describes a case study using ontologies and reasoning for matching eligibility criteria to patients' conditions.
-•	The Epoch project develops an ontology-based framework for managing clinical trials.
+- Different formalisms have been used to represent eligibility criteria.
+- Ad hoc languages, such as HL7 RIM, provide basic comparison and logical operators.
+- Arden Syntax offers a hybrid approach with rich time functions and explicit links to clinical data.
+- Logic-based languages, including SQL and Description Logic, vary in expressivity.
+- The paper describes a case study using ontologies and reasoning for matching eligibility criteria to patients' conditions.
+- The Epoch project develops an ontology-based framework for managing clinical trials.
 Figure 2: Eligibility criteria for a clinical trial for adjuvant therapy for prostate cancer.
 5 Method
 •	Reasoning over ontologies is necessary for formalizing and reasoning over eligibility criteria, especially when criteria are expressed as generic conditions or when only some attributes of diseases are specified. It also requires the ability to represent and reason over data types and time. Traceability of results is important for identifying supporting observations for patient selection or rejection in clinical trials.
