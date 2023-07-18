@@ -26,13 +26,13 @@ Figure 1: Example of a patient record available at a multidisciplinary meeting.
 - The paper describes a case study using ontologies and reasoning for matching eligibility criteria to patients' conditions.
 - The Epoch project develops an ontology-based framework for managing clinical trials.
 Figure 2: Eligibility criteria for a clinical trial for adjuvant therapy for prostate cancer.
-5 Method
-•	Reasoning over ontologies is necessary for formalizing and reasoning over eligibility criteria, especially when criteria are expressed as generic conditions or when only some attributes of diseases are specified. It also requires the ability to represent and reason over data types and time. Traceability of results is important for identifying supporting observations for patient selection or rejection in clinical trials.
-•	The hypothesis is made that mapping terms from patients' records and eligibility criteria to a formal ontology minimizes ambiguity and enables automatic reasoning. The ontology serves as a reference terminology and background knowledge.
-•	The system loads all active trials and patients into the system before a multidisciplinary meeting. Eligibility criteria are matched to patient observations, aggregated, and used to extract a list of clinical trials that satisfy inclusion criteria and do not satisfy exclusion criteria.
-•	The system exclusively uses OWL and SWRL to represent patient data and eligibility criteria, with everything loaded into an ontology and all operations performed within the ontology.
-5.1 Choosing the Medical Ontology
-•	The selection of a suitable medical ontology involves considering coverage, availability, and format. The NCI Thesaurus (NCI-T) and SNOMED CT are evaluated based on these criteria.
+5. Method
+ - Reasoning over ontologies is necessary for formalizing and reasoning over eligibility criteria, especially when criteria are expressed as generic conditions or when only some attributes of diseases are specified. It also requires the ability to represent and reason over data types and time. Traceability of results is important for identifying supporting observations for patient selection or rejection in clinical trials.
+ - The hypothesis is made that mapping terms from patients' records and eligibility criteria to a formal ontology minimizes ambiguity and enables automatic reasoning. The ontology serves as a reference terminology and background knowledge.
+ - The system loads all active trials and patients into the system before a multidisciplinary meeting. Eligibility criteria are matched to patient observations, aggregated, and used to extract a list of clinical trials that satisfy inclusion criteria and do not satisfy exclusion criteria.
+ - The system exclusively uses OWL and SWRL to represent patient data and eligibility criteria, with everything loaded into an ontology and all operations performed within the ontology.
+- 5.1 Choosing the Medical Ontology
+    - The selection of a suitable medical ontology involves considering coverage, availability, and format. The NCI Thesaurus (NCI-T) and SNOMED CT are evaluated based on these criteria.
 •	An expert selects 200 criteria from clinicaltrials.gov, and MetaMap is used to map the criteria to concepts in the UMLS metathesaurus. The evaluation reveals that NCI-T provides the best coverage (75%), followed by SNOMED CT (65%).
 •	NCI-T is open source and directly available in OWL1.1, while SNOMED CT has an expensive license and requires conversion from database tables. NCI-T's properties (may_have and excludes_) have specific meanings for human use but do not impact consistency verification from a Description Logics perspective.
 •	NCI-Thesaurus is chosen as the background knowledge due to its coverage and availability. The system aims for minimal coupling with the ontology to allow portability in other domains.
